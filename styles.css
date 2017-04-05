@@ -89,30 +89,32 @@ img {
 #but_menu {
 	display: none; 
 	float: right; 
-	background: url(images/icon_menu.png) no-repeat 50% 50%; 
+	background: url(images/icon_menu.png) no-repeat 48% 50%; 
 	background-color: #000; 
-	margin-left: 10px; 
-	width: 32px; 
-	height: 32px;
+	margin-left: 13px; 
+	width: 35px; 
+	height: 35px;
 	border-radius: 5px; 
-	border: 1px solid #feba0c;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	border: 2px solid #feba0c;
 }
 #but_contacts {
 	display: none; 
 	float: right; 
 	background: url(images/icon_tel.png) no-repeat 50% 50%; 
 	background-color: #000;
-	width: 32px; 
-	height: 32px; 
-	border: 1px solid #feba0c; 
+	width: 35px; 
+	height: 35px; 
+	border: 2px solid #feba0c; 
 	border-radius: 5px;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
 }
-#but_menu:hover  {
+#but_menu:hover, #but_contacts:hover  {
 	box-shadow: 0px 0px 25px #feba0c; 
-	cursor: pointer;
-}
-#but_contacts:hover { 
-	box-shadow: 0px 0px 25px #feba0c; 
+	-moz-box-shadow: 0px 0px 25px #feba0c; 
+	-webkit-box-shadow: 0px 0px 25px #feba0c; 
 	cursor: pointer;
 }
 .header-t {
@@ -237,8 +239,7 @@ img {
 	float: right; 
 	width: 45%; 
 	margin-top: 40px; 
-	border: 2px solid #f2c05f;
-	box-sizing: border-box; 
+	border: 2px solid #f2c05f; 
 } 
 /*-----   / О проекте ------*/
 /*-----   Завораживающее звучание нашей музыки ------*/
@@ -251,6 +252,9 @@ img {
 	border: 0; 
 	margin-bottom: 20px;
 	background: linear-gradient(to right, rgba(242,192,95,0)0%, rgba(242,192,95,0.7)50%, rgba(242,192,95,0)100%);
+	background: -moz-linear-gradient(to right, rgba(242,192,95,0)0%, rgba(242,192,95,0.7)50%, rgba(242,192,95,0)100%);
+	background: -webkit-linear-gradient(to right, rgba(242,192,95,0)0%, rgba(242,192,95,0.7)50%, rgba(242,192,95,0)100%);
+	background: -o-linear-gradient(to right, rgba(242,192,95,0)0%, rgba(242,192,95,0.7)50%, rgba(242,192,95,0)100%);
 }
 .main-middle3 h2 {
 	font-size: 24px; 
@@ -264,6 +268,8 @@ img {
 	margin-right: 2.1%; 
 	margin-bottom: 70px; 
 	box-shadow: 0px 0px 20px #feba0c;
+	-moz-box-shadow: 0px 0px 20px #feba0c; 
+	-webkit-box-shadow: 0px 0px 20px #feba0c; 
 	background-color: #e29e00;
 }
 .main-middle3 article.third {
@@ -289,6 +295,8 @@ img {
 .main-middle3  article:hover {
 	color: #fff;
 	box-shadow: 0px 0px 85px #feba0c; 
+	-moz-box-shadow: 0px 0px 85px #feba0c; 
+	-webkit-box-shadow: 0px 0px 85px #feba0c; 
 }
 /*-----   Завораживающее звучание нашей музыки ------*/
 /*      Наш коллектив          */
@@ -310,6 +318,8 @@ img {
 	background-color: #fff; 
 	margin-bottom: 50px; 
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
 .middle4-article article:hover {
 	background: #000; 
@@ -421,26 +431,21 @@ p.post{
 	vertical-align: middle; 
 	margin-right: 7px; 
 	opacity: 0.5;
+	-moz-opacity: 0.5;
 }
 .foot .social  a:hover .icon {
 	opacity: 0.9;
+	-moz-opacity: 0.9;
 }
-.foot-email {
+.foot-email, .foot-textarea {
 	width: 100%; 
 	text-transform: uppercase; 
 	padding: 6px 15px; 
 	margin-bottom: 14px; 
 	font-size: 14px; 
 	box-sizing: border-box; 
-	border: none;
-}
-.foot-textarea {
-	width: 100%; 
-	text-transform: uppercase; 
-	padding: 6px 15px; 
-	margin-bottom: 14px; 
-	font-size: 14px; 
-	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	border: none;
 }
 .foot-submit {
@@ -451,11 +456,13 @@ p.post{
 	border: none;  
 	background-color: #000;  
 	opacity: 0.2;
+	-moz-opacity: 0.2;
 	cursor: pointer;
 }
 .foot-submit:hover {
 	background: #e29e00; 
 	opacity: 1;
+	moz-opacity: 1;
 }
 /*      /Футер          */
 .loading {
@@ -504,7 +511,7 @@ p.post{
 		float: none; 
 		width: 60%; 
 		margin: 20px auto; 
-		display: table;
+		display: block;
 	} 
 	.foot h2{ 
 		font-size: 14px; 
@@ -575,6 +582,8 @@ p.post{
 		width: 48.7%; 
 		margin-bottom: 30px; 
 		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 	}
 	.but_else {
 		margin-bottom: 10px; 
@@ -603,15 +612,15 @@ p.post{
 	}
 	.logo-slog { 
 		float: none; 
-		padding: 0 10px 10px 5px; 
+		padding: 0 12px 10px 5px; 
 	}
 	.slog {
 		width: 170px; 
 		height: auto;
-		margin-left: 7px;
+		margin-left: 0;
 	}
 	.logo img {
-		width: 50px; 
+		width: 45px; 
 		height: auto;
 	}
 	.header-b {
@@ -625,6 +634,8 @@ p.post{
 		position: absolute; 
 		width: 100%; 
 		box-sizing: border-box; 
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
 		background-color: rgba(0,0,0,0.8);
 	}
 	.menu li {
@@ -665,7 +676,7 @@ p.post{
 		display: block;
 	}
 	.foto {
-		width: 100%;
+		width: 97%;
 	}
 	.row_1 article:nth-child(2), .row_2 article:nth-child(2), .row_footer  article:nth-child(2) {
 		margin-right: 0; 

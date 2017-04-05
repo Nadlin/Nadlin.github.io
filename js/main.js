@@ -67,4 +67,55 @@ jQuery(document).ready(function($) {
 		};
 	});
 		
+	
+	$.fn.dataImg = function(options) {
+
+  var settings = $.extend({
+    sml: 400,
+    med: 800,
+    lrg: 1450,
+    resize: false
+  }, options );
+
+  var elements = $(this);
+
+  function getSrc(element) {
+    var screen = $(window).width();
+    if (screen > settings.med) { 
+        return element.data('lrg');
+    }
+    else if (screen <= settings.med && screen > settings.sml) {
+        return element.data('med');
+    }
+    return element.data('sml');
+  }
+
+  function breakpoints() {
+    elements.each(function () {
+        var e = $(this);
+        var src = getSrc(e);
+        if(src != undefined){
+            if (e.is('img')) {
+                e.attr('src', src);
+            } 
+        }        
+    });
+  }breakpoints();
+
+  if(settings.resize == true){
+    $(window).resize(function(){
+      breakpoints();
+    });
+  }
+
+};
+$(function() {
+	$(".data-img").dataImg({
+	sml: 400,
+    med: 800,
+    lrg: 1450,
+    resize: true,
+	bgImg: true
+  });
+ });
 });
